@@ -5,6 +5,9 @@
   font-family: "Poppins", sans-serif;
 
 }
+.app.dark{
+  background: rgb(23,22,22);
+}
 .footer{
   text-align: center;
   padding: 20px;
@@ -113,7 +116,7 @@ background: linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#fcfcfc",GradientType=1); */
 }
 .app.dark .menu{
-  /* background-color: transparent; */
+  background: rgb(23,22,22);
 }
 .app.dark {
   /* background-color: rgb(255, 245, 245); */
@@ -253,6 +256,12 @@ h5{
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .dividirdois {
+    flex-direction: column; /* Alinha os itens um em cima do outro */
+  }
+}
 .dividirdois{
   display: flex ;
 }
@@ -386,7 +395,6 @@ h5{
   text-decoration: none;
   border-radius: 15px;
   /* background-color: rgba(255,255,255,0.15); */
-  border: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(30px);
   color: rgba(255,255,255,0.8);
   font-size: 14px;
@@ -438,7 +446,6 @@ h5{
     text-decoration: none;
     border-radius: 15px;
     /* background-color: rgba(255,255,255,0.1); */
-    border: 1px solid rgba(255,255,255,0.1);
     /* backdrop-filter: blur(30px); */
     color: rgba(255,255,255,0.8);
     font-size: 14px;

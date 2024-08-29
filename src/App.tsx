@@ -54,7 +54,7 @@ const App: React.FC = () => {
             {language === 'en' ? 'Academic' : 'Acadêmico'}
           </a>
           <a href="#" onClick={() => setActiveComponent('Acadêmico')}>
-            {language === 'en' ? 'Projetos' : 'Projects'}
+            {language === 'en' ? 'Projects' : 'Projetos'}
           </a>
           {/* <a href="#" onClick={() => setActiveComponent('Interesses')}>
             {language === 'en' ? 'Research Areas' : 'Áreas de Pesquisa'}
