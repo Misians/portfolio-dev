@@ -138,7 +138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
 /* background: linear-gradient(90deg, rgba(23,22,22,1) 0%, rgba(23,8,23,1) 50%, rgba(15,15,22,1) 97%); */
 }
 
-.app.light .text-abner{
+.app.light .text-artemisia{
   margin-top: 40px;
   font-family: "Poppins", sans-serif;
   gap: 30px;
@@ -160,7 +160,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.app.dark .text-abner{
+.app.dark .text-artemisia{
   margin-top: 40px;
   font-family: "Poppins", sans-serif;
   gap: 30px;
@@ -181,7 +181,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.info-abner img{
+.info-artemisia img{
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.1);
 }
@@ -331,7 +331,7 @@ h5{
 .app.dark a{
   color: #a8a8a8;
 }
-.imageabner{
+.imageartemisia{
   background-color: #161616;
   border-radius: 100%;
 
@@ -460,7 +460,7 @@ h5{
     width: 100%;
     justify-content: center;
   }
-  .text-abner{
+  .text-artemisia{
     max-width: fit-content;
   }
   .images {

@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useState, useContext } from 'react';
-import abner from './components/assets/IMG_1996.jpg';
+import artemisia from './components/assets/IMG_1996.jpg';
 import './switch.css';
 import ingles from './components/inglaterra.png';
 import brasil from './components/brasil.png';
@@ -40,7 +40,7 @@ const App: React.FC = () => {
 
   return (
     <div className={`app ${theme}`}>
-      <img className='banner-img' src={abner}alt="" />
+      <img className='banner-img' src={artemisia}alt="" />
       <div className="photo-container">
         <img src={iconfoto} alt="" className="rounded-photo" />
       </div>
@@ -73,7 +73,7 @@ const App: React.FC = () => {
         </div>
         <div className="corpo">
           <div className="infos">
-            {/* <img className='imageabner' src={abner} alt="" /> */}
+            {/* <img className='imageartemisia' src={artemisia} alt="" /> */}
             
             <div className="content">
             {renderComponent()}

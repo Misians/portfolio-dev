@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import laboratorio from './assets/IMG_1991.jpg';
-import abner from './assets/IMG_2036.jpg';
+import artemisia from './assets/IMG_2036.jpg';
 
 const Projetos: React.FC = () => {
   const { language } = useLanguage();
@@ -46,7 +46,7 @@ const Projetos: React.FC = () => {
       <h3>LAR (LABORATÓRIO DE APRENDIZAGEM E ROBÓTICA)</h3>
       <div className="images">
         <img src={laboratorio} alt="" />
-        <img src={abner} alt="" />
+        <img src={artemisia} alt="" />
       </div>
     </div>
   );
