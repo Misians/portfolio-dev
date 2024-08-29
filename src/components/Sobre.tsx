@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
-import { useState } from 'react';
+import Emoji from 'react-emoji-render';
 
 const Sobre: React.FC = () => {
   const { language } = useLanguage();
-  
-type Technology = {
-  name: string;
-  experience: string;
-};
-const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
-  
+  type Technology = {
+    name: string;
+    emoji: string;
+    experience: string;
+    color: string;
+  };
+
+  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+
   const technologies: Technology[] = [
-    { name: language === 'en' ? 'React' : 'React', experience: language === 'en' ? '2 years' : '2 anos' },
-    { name: language === 'en' ? 'Node' : 'Node', experience: language === 'en' ? '2 years' : '2 anos' },
-    { name: language === 'en' ? 'Php' : 'Php', experience: language === 'en' ? '3 years' : '3 anos' },
-    { name: language === 'en' ? 'Javascript' : 'Javascript', experience: language === 'en' ? '3 years' : '3 anos' },
-    { name: language === 'en' ? 'Flutter' : 'Flutter', experience: language === 'en' ? '1 year' : '1 ano' },
-    { name: language === 'en' ? 'Mysql' : 'Mysql', experience: language === 'en' ? '3 years' : '3 anos' },
-    { name: language === 'en' ? 'Vuejs' : 'Vuejs', experience: language === 'en' ? '1.5 years' : '1,5 anos' }
+    { name: 'React', emoji: '🟦', experience: language === 'en' ? '2 years' : '2 anos', color: '#61DAFB' },
+    { name: 'Node', emoji: '🌳', experience: language === 'en' ? '2 years' : '2 anos', color: '#339933' },
+    { name: 'Php', emoji: '🐘', experience: language === 'en' ? '3 years' : '3 anos', color: '#4F5B93' },
+    { name: 'Javascript', emoji: '🟨', experience: language === 'en' ? '3 years' : '3 anos', color: '#F7DF1E' },
+    { name: 'Flutter', emoji: '📱', experience: language === 'en' ? '1 year' : '1 ano', color: '#02569B' },
+    { name: 'Mysql', emoji: '🐬', experience: language === 'en' ? '3 years' : '3 anos', color: '#00758F' },
+    { name: 'Vuejs', emoji: '🟩', experience: language === 'en' ? '1.5 years' : '1,5 anos', color: '#42B883' },
   ];
 
   const handleMouseEnter = (tech: string) => {
@@ -31,40 +33,36 @@ const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   };
 
 
+
   return (
     <div>
-      {/* <h3>{language === 'en' ? 'About' : 'Sobre'}</h3> */}
-      
-      {/* <p className='text-abner'>
-        {language === 'en' ? (
-          'Hello, my name is Artemísia Kimberlly. I have been a Web and Mobile developer since 2022. I am currently completing my degree in Computer Science at the State University of Rio Grande do Norte (UERN) in Natal, Rio Grande do Norte, Brazil.'
-        ) : (
-      'Olá, meu nome é Artemísia Kimberlly. Sou desenvolvedora Web e Mobile desde 2022. Atualmente, estou finalizando minha graduação em Ciência da Computação na Universidade do Estado do Rio Grande do Norte (UERN), em Natal, Rio Grande do Norte, Brasil.'        )}
-      </p> */}
-      <div className='dividirdois'>
-
-      <div>
-      <h3>
-        {language === 'en' ? 'Technologies ' : 'Tecnologias'}</h3>
-        <div className="interesses">
-        {technologies.map((tech, index) => (
+      <div className="dividirdois">
+        <div>
+          <h3>{language === 'en' ? 'Technologies' : 'Tecnologias'}</h3>
+          <div className="interesses">
+            {technologies.map((tech, index) => (
               <div
-                key={index}
-                className="tech-item"
-                onMouseEnter={() => handleMouseEnter(tech.name)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <h4>{tech.name}</h4>
-                {hoveredTech === tech.name && (
-                  <div className="tooltip">
-                    <p>{tech.experience}</p>
-                  </div>
-                )}
-              </div>
+              key={index}
+              className="tech-item"
+              onMouseEnter={() => handleMouseEnter(tech.name)}
+              onMouseLeave={handleMouseLeave}
+              
+            >
+              <h4 style={{
+                backgroundColor: hoveredTech === tech.name ? tech.color : 'transparent', // Muda a cor de fundo quando hover
+                transition: 'background-color 0.3s ease',
+              }}>
+                <Emoji text={tech.emoji} /> {tech.name}
+              </h4>
+              {hoveredTech === tech.name && (
+                <div className="tooltip">
+                  <p>{tech.experience}</p>
+                </div>
+              )}
+            </div>
             ))}
-      </div>
-
-      </div>
+          </div>
+        </div>
       <div><h3>{language === 'en' ? 'Work experiences:' : 'Experiências:'}</h3>
 
       <div className="divproj">
