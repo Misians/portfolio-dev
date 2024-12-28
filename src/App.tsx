@@ -40,13 +40,8 @@ const App: React.FC = () => {
 
   return (
     <div className={`app ${theme}`}>
-      <img className='banner-img' src={artemisia}alt="" />
-      <div className="photo-container">
-        <img src={iconfoto} alt="" className="rounded-photo" />
-      </div>
-      
-        
-        <div className="menu">
+      {/* <img className='banner-img' src={artemisia}alt="" /> */}
+      <div className="menu">
           <a href="#" onClick={() => setActiveComponent('Sobre')}>
             {language === 'en' ? 'About' : 'Sobre'}
           </a>
@@ -71,6 +66,12 @@ const App: React.FC = () => {
             <img src={brasil} alt="Português" onClick={() => handleLanguageChange('pt')} />
           </div>
         </div>
+        {/* <div className="photo-container">
+        <img src={iconfoto} alt="" className="rounded-photo" />
+      </div> */}
+      
+        
+        
         <div className="corpo">
           <div className="infos">
             {/* <img className='imageartemisia' src={artemisia} alt="" /> */}
